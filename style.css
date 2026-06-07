@@ -1,25 +1,97 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #f5f5f5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
     color: #222;
+    margin: 0;
+    padding: 0;
 }
 
+/* Navigation Bar */
+
 nav {
-    margin-bottom: 30px;
+    background-color: #1e293b;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 nav a {
-    margin-right: 20px;
+    color: white;
     text-decoration: none;
-    color: darkblue;
-    font-weight: bold;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
 }
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Main Content Box */
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Headings */
 
 h1 {
-    color: #333;
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
+h2 {
+    color: #334155;
+}
+
+/* Paragraphs */
+
+p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Lists */
+
 ul {
-    line-height: 2;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* PDF Links */
+
+li {
+    margin-bottom: 16px;
+}
+
+li a {
+    display: block;
+    background-color: #e2e8f0;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: #cbd5e1;
+    transform: translateX(5px);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 14px;
 }
