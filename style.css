@@ -297,3 +297,23 @@ footer {
     /* Slightly reduced blur to keep the glow tighter and brighter */
     filter: blur(15px); 
 }
+
+/* Container for the AoPS link */
+.aops-link {
+    display: flex !important; /* Forces the icon and text into a row */
+    align-items: center;      /* Centers them vertically */
+    gap: 20px;               /* Space between icon and text */
+}
+
+/* Style the icon */
+.aops-icon {
+    width: 40px;             /* Adjust size to match your other icons */
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Style the text */
+.aops-text {
+    font-size: 18px;
+    font-weight: 600;
+}

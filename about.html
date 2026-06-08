@@ -16,31 +16,20 @@
 </nav>
 
 <div class="container">
-
     <h1>About Me</h1>
-
     <p>
         Hello! I am just testing the About Me section. I will write something about myself here later.
     </p>
 
+    <ul>
+        <li>
+            <a href="https://artofproblemsolving.com/community/user/1105342" target="_blank">
+                <img src="favicon.png" alt="AoPS Logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 15px;">
+                SomeonecoolLovesMaths on AoPS
+            </a>
+        </li>
+    </ul>
 </div>
-
-<a href="https://artofproblemsolving.com/community/user/1105342"
-   target="_blank"
-   class="aops-card">
-
-    <img src="favicon.png"
-         alt="AoPS Logo">
-
-    <div class="aops-text">
-
-        <h3>Art of Problem Solving</h3>
-
-        <p>SomeonecoolLovesMaths</p>
-
-    </div>
-
-</a>
 
 <footer>
     © 2026 My Website
@@ -49,16 +38,11 @@
 <div class="cursor-glow"></div>
 
 <script>
-
-const glow = document.querySelector(".cursor-glow");
-
-document.addEventListener("mousemove", (e) => {
-
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
-
-});
-
+    const glow = document.querySelector(".cursor-glow");
+    document.addEventListener("mousemove", (e) => {
+        glow.style.left = e.clientX + "px";
+        glow.style.top = e.clientY + "px";
+    });
 </script>
 </body>
 </html>
