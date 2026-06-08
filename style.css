@@ -99,19 +99,18 @@ footer {
 /* Dropdown Menu */
 
 .dropdown {
-    display: inline-block;
     position: relative;
-    padding-top: 10px;
+    display: inline-block;
 }
 
 .dropbtn {
-    background: none;
-    border: none;
+    background-color: transparent;
     color: white;
+    padding: 14px 18px;
     font-size: 18px;
-    font-weight: bold;
+    border: none;
     cursor: pointer;
-    margin-left: 18px;
+    font-weight: bold;
 }
 
 .dropbtn:hover {
@@ -121,20 +120,22 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: white;
     min-width: 220px;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    z-index: 100;
-    margin-top: 0px;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 .dropdown-content a {
-    display: block;
     color: #0f172a;
     padding: 14px 18px;
     text-decoration: none;
+    display: block;
+    transition: 0.2s;
 }
 
 .dropdown-content a:hover {
