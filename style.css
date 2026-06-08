@@ -1,11 +1,12 @@
 body {
+
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
     background: linear-gradient(
         135deg,
+        #020617,
         #0f172a,
-        #111827,
-        #1e293b
+        #111827
     );
 
     background-attachment: fixed;
