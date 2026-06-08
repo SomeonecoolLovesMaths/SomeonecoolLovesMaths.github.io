@@ -9,23 +9,38 @@ body {
 /* Navigation Bar */
 
 nav {
-    background-color: #1e293b;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #16a34a,
+        #ea580c
+    );
+
     padding: 18px;
+
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
-    margin: 0 18px;
+
+    margin: 0 20px;
+
     font-size: 18px;
+
     font-weight: 600;
+
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #93c5fd;
+    color: #dbeafe;
+
+    text-shadow: 0 0 8px rgba(255,255,255,0.6);
 }
 
 /* Main Content Box */
