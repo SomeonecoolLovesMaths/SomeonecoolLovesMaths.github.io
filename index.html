@@ -63,24 +63,36 @@ document.addEventListener("mousemove", (e) => {
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button id="music-toggle" class="music-btn">
-    🔈 Music: Off
-</button>
-
 <script>
     const music = document.getElementById("background-music");
-    const btn = document.getElementById("music-toggle");
 
-    btn.addEventListener("click", () => {
-        if (music.paused) {
-            music.volume = 0.3; // Sets volume to 30%
+    // This function attempts to play the music once the user interacts with the page
+    const startAudio = () => {
+        music.volume = 0.3;
+        music.play().then(() => {
+            // Audio started successfully!
+            // Remove the event listener so it doesn't trigger again
+            document.removeEventListener("click", startAudio);
+            document.removeEventListener("keydown", startAudio);
+        }).catch(error => {
+            console.log("Interaction required to play audio.");
+        });
+    };
+
+    // The music will start on the first click OR first key press anywhere on the page
+    document.addEventListener("click", startAudio);
+    document.addEventListener("keydown", startAudio);
+    
+    // Optional: Auto-resume if coming from another page
+    window.addEventListener("load", () => {
+        if (localStorage.getItem("musicPlaying") === "true") {
             music.play();
-            btn.textContent = "🔊 Music: On";
-        } else {
-            music.pause();
-            btn.textContent = "🔈 Music: Off";
         }
     });
+
+    // Save state so it stays "On" when you change pages
+    music.addEventListener("play", () => localStorage.setItem("musicPlaying", "true"));
+    music.addEventListener("pause", () => localStorage.setItem("musicPlaying", "false"));
 </script>
 
 </body>
