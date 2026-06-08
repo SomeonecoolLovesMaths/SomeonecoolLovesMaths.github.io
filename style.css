@@ -95,3 +95,51 @@ footer {
     color: #666;
     font-size: 14px;
 }
+
+/* Dropdown Menu */
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+.dropbtn:hover {
+    color: #93c5fd;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    z-index: 100;
+    margin-top: 12px;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #0f172a;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #e2e8f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
