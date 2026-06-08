@@ -10,46 +10,78 @@ body {
 /* Navigation Bar */
 
 nav {
-
-    background: linear-gradient(
-        90deg,
-        #2563eb,
-        #16a34a,
-        #ea580c
-    );
-
-    padding: 18px;
-
-    text-align: center;
-
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #2563eb, #16a34a, #ea580c);
     box-shadow: 0 4px 18px rgba(0,0,0,0.35);
-
     position: sticky;
     top: 0;
-
     z-index: 1000;
 }
 
+/* Logo Button Styling */
+.logo-btn {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Breathing Logo Animation */
+.logo-btn img {
+    height: 40px;
+    width: auto;
+    /* Continuous breathing effect */
+    animation: breathing 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Define the breathing motion */
+@keyframes breathing {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); } /* Grows to 115% */
+    100% { transform: scale(1); }
+}
+
+/* Hover effects */
+.logo-btn:hover img {
+    animation-play-state: paused; /* Stop the pulse on hover */
+    transform: scale(1.2);        /* Slightly larger and static on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Container for the links */
+.nav-links {
+    display: flex;
+    margin-left: auto;
+}
+
+/* Existing Link Styles */
 nav a {
-
     color: white;
-
     text-decoration: none;
-
     margin: 0 20px;
-
     font-size: 18px;
-
     font-weight: 600;
-
+    position: relative;
+    padding-bottom: 5px;
     transition: 0.3s;
 }
 
-nav a:hover {
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
 
-    color: #dbeafe;
-
-    text-shadow: 0 0 12px rgba(255,255,255,0.7);
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Main Content Box */
