@@ -59,5 +59,29 @@ document.addEventListener("mousemove", (e) => {
 
 </script>
 
+<audio id="background-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-toggle" class="music-btn">
+    🔈 Music: Off
+</button>
+
+<script>
+    const music = document.getElementById("background-music");
+    const btn = document.getElementById("music-toggle");
+
+    btn.addEventListener("click", () => {
+        if (music.paused) {
+            music.volume = 0.3; // Sets volume to 30%
+            music.play();
+            btn.textContent = "🔊 Music: On";
+        } else {
+            music.pause();
+            btn.textContent = "🔈 Music: Off";
+        }
+    });
+</script>
+
 </body>
 </html>
