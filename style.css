@@ -10,83 +10,45 @@ body {
 /* Navigation Bar */
 
 nav {
-    display: grid;
-    /* 1fr for logo area, auto for centered links, 1fr for balance on the right */
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 15px 30px;
-    background: linear-gradient(90deg, #2563eb, #16a34a, #ea580c);
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #16a34a,
+        #ea580c
+    );
+
+    padding: 18px;
+
+    text-align: center;
+
     box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
 
-/* Logo Button Styling (Far Left) */
-.logo-btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
-}
-
-/* Breathing Logo Animation */
-.logo-btn img {
-    height: 40px;
-    width: auto;
-    animation: breathing 3s ease-in-out infinite;
-    transform-origin: center;
-}
-
-@keyframes breathing {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
-}
-
-.logo-btn:hover img {
-    animation-play-state: paused;
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-}
-
-/* Centered Links Container */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Existing Link Styles */
 nav a {
+
     color: white;
+
     text-decoration: none;
+
     margin: 0 20px;
+
     font-size: 18px;
+
     font-weight: 600;
-    position: relative;
-    padding-bottom: 5px;
+
     transition: 0.3s;
 }
 
-/* Left-to-right sweep animation */
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
 nav a:hover {
+
     color: #dbeafe;
+
     text-shadow: 0 0 12px rgba(255,255,255,0.7);
 }
 
