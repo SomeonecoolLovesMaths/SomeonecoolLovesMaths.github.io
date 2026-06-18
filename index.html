@@ -2,119 +2,136 @@
 <html>
 
 <head>
-    <title>SomeonecoolLovesMaths</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+
+<title>SomeonecoolLovesMaths</title>
+
+<link rel="icon" href="favicon.png">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
+
 <nav>
 
-    <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-    <a href="about.html">About Me</a>
+<a href="about.html">About Me</a>
 
-    <div class="dropdown">
 
-        <button class="dropbtn">Resources</button>
+<div class="dropdown">
 
-        <div class="dropdown-content">
-            <a href="geometry.html">Geometry</a>
-            <a href="algebra.html">Algebra</a>
-            <a href="combinatorics.html">Combinatorics</a>
-            <a href="number-theory.html">Number Theory</a>
-        </div>
+<button class="dropbtn">
 
-    </div>
+Resources
 
-</nav>
+</button>
 
-<div class="container">
 
-    <h1>Welcome!</h1>
+<div class="dropdown-content">
 
-    <p>
-        Welcome to my mathematics resource website. We have music now!
+<a href="geometry.html">Geometry</a>
 
-        This is supposed to be a collection of some cool problems that I have solved and some handouts that I have made. Have Fun!
-    </p>
+<a href="algebra.html">Algebra</a>
+
+<a href="combinatorics.html">
+
+Combinatorics
+
+</a>
+
+<a href="number-theory.html">
+
+Number Theory
+
+</a>
 
 </div>
 
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<h1>
+
+Welcome!
+
+</h1>
+
+
+<p>
+
+Welcome to my mathematics resource website.
+
+
+We have music now!
+
+
+This is supposed to be a collection of some cool problems that I have solved and some handouts that I have made.
+
+
+Have fun!
+
+</p>
+
+
+
+</div>
+
+
+
 <footer>
-    © 2026 My Website
+
+© 2026 My Website
+
 </footer>
+
+
 
 <div class="cursor-glow"></div>
 
-<script>
 
-const glow = document.querySelector(".cursor-glow");
 
-document.addEventListener("mousemove", (e) => {
+<button
 
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
+id="music-toggle"
 
-});
+class="music-btn">
 
-</script>
+🔈 Music: Off
 
-<button id="music-toggle" class="music-btn">🔈 Music: Off</button>
+</button>
 
-<audio id="background-music" loop>
-    <source src="music.mp3" type="audio/mpeg">
+
+
+<audio
+
+id="background-music"
+
+loop>
+
+<source
+
+src="music.mp3"
+
+type="audio/mpeg">
+
 </audio>
 
-<script>
-    const music = document.getElementById("background-music");
-    const btn = document.getElementById("music-toggle");
 
-    // 1. Function to handle play/pause
-    const toggleMusic = () => {
-        if (music.paused) {
-            music.volume = 0.3;
-            music.play().catch(() => {});
-            btn.textContent = "🔊 Music: On";
-            localStorage.setItem("musicPlaying", "true");
-        } else {
-            music.pause();
-            btn.textContent = "🔈 Music: Off";
-            localStorage.setItem("musicPlaying", "false");
-        }
-    };
 
-    // 2. Add event listener to the button
-    btn.addEventListener("click", toggleMusic);
+<script src="script.js"></script>
 
-    // 3. Auto-start on first interaction (click anywhere on page)
-    const autoStart = () => {
-        if (music.paused && localStorage.getItem("musicPlaying") !== "false") {
-            music.volume = 0.3;
-            music.play().then(() => {
-                btn.textContent = "🔊 Music: On";
-                localStorage.setItem("musicPlaying", "true");
-                document.removeEventListener("click", autoStart);
-            }).catch(() => {});
-        }
-    };
-
-    document.addEventListener("click", autoStart);
-
-    // 4. On page load, check if it was playing previously
-    window.addEventListener("load", () => {
-        if (localStorage.getItem("musicPlaying") === "true") {
-            music.volume = 0.3;
-            // Attempt autoplay; if blocked, it will wait for the first click
-            music.play().then(() => {
-                btn.textContent = "🔊 Music: On";
-            }).catch(() => {
-                btn.textContent = "🔈 Music: Off";
-            });
-        }
-    });
-</script>
 
 </body>
+
 </html>

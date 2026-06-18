@@ -2,9 +2,13 @@
 <html>
 
 <head>
-    <title>SomeonecoolLovesMaths</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>Resources</title>
+
+    <link rel="icon" href="favicon.png">
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -17,105 +21,104 @@
 
     <div class="dropdown">
 
-        <button class="dropbtn">Resources</button>
+        <button class="dropbtn">
+
+            Resources
+
+        </button>
 
         <div class="dropdown-content">
+
             <a href="geometry.html">Geometry</a>
+
             <a href="algebra.html">Algebra</a>
+
             <a href="combinatorics.html">Combinatorics</a>
+
             <a href="number-theory.html">Number Theory</a>
+
         </div>
 
     </div>
 
 </nav>
 
+
 <div class="container">
 
     <h1>Resources</h1>
 
     <ul>
-        <li><a href="geometry.html">Geometry</a></li>
-        <li><a href="number-theory.html">Number Theory</a></li>
-        <li><a href="combinatorics.html">Combinatorics</a></li>
-        <li><a href="algebra.html">Algebra</a></li>
+
+        <li>
+            <a href="geometry.html">
+
+                Geometry
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="algebra.html">
+
+                Algebra
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="combinatorics.html">
+
+                Combinatorics
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="number-theory.html">
+
+                Number Theory
+
+            </a>
+        </li>
+
     </ul>
 
 </div>
 
+
 <footer>
-    © 2026 My Website
+
+© 2026 My Website
+
 </footer>
+
 
 <div class="cursor-glow"></div>
 
-<script>
 
-const glow = document.querySelector(".cursor-glow");
+<button
+id="music-toggle"
+class="music-btn">
 
-document.addEventListener("mousemove", (e) => {
+🔈 Music: Off
 
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
+</button>
 
-});
 
-</script>
+<audio
+id="background-music"
+loop>
 
-<button id="music-toggle" class="music-btn">🔈 Music: Off</button>
+<source src="music.mp3" type="audio/mpeg">
 
-<audio id="background-music" loop>
-    <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<script>
-    const music = document.getElementById("background-music");
-    const btn = document.getElementById("music-toggle");
 
-    // 1. Function to handle play/pause
-    const toggleMusic = () => {
-        if (music.paused) {
-            music.volume = 0.3;
-            music.play().catch(() => {});
-            btn.textContent = "🔊 Music: On";
-            localStorage.setItem("musicPlaying", "true");
-        } else {
-            music.pause();
-            btn.textContent = "🔈 Music: Off";
-            localStorage.setItem("musicPlaying", "false");
-        }
-    };
-
-    // 2. Add event listener to the button
-    btn.addEventListener("click", toggleMusic);
-
-    // 3. Auto-start on first interaction (click anywhere on page)
-    const autoStart = () => {
-        if (music.paused && localStorage.getItem("musicPlaying") !== "false") {
-            music.volume = 0.3;
-            music.play().then(() => {
-                btn.textContent = "🔊 Music: On";
-                localStorage.setItem("musicPlaying", "true");
-                document.removeEventListener("click", autoStart);
-            }).catch(() => {});
-        }
-    };
-
-    document.addEventListener("click", autoStart);
-
-    // 4. On page load, check if it was playing previously
-    window.addEventListener("load", () => {
-        if (localStorage.getItem("musicPlaying") === "true") {
-            music.volume = 0.3;
-            // Attempt autoplay; if blocked, it will wait for the first click
-            music.play().then(() => {
-                btn.textContent = "🔊 Music: On";
-            }).catch(() => {
-                btn.textContent = "🔈 Music: Off";
-            });
-        }
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
