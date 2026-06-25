@@ -24,146 +24,66 @@ body {
    NAVIGATION
 ========================================== */
 
-nav{
+nav {
 
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #16a34a,
+        #ea580c
+    );
 
-    background:
+    padding: 18px 40px;
 
-        linear-gradient(
+    display: flex;
 
-            90deg,
+    justify-content: flex-end;
 
-            #2563eb,
+    align-items: center;
 
-            #16a34a,
+    position: sticky;
 
-            #ea580c
+    top: 0;
 
-        );
-
-
-    padding:18px 40px;
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-    position:sticky;
-
-
-    top:0;
-
-
-    z-index:1000;
-
+    z-index: 1000;
 
     box-shadow:
-
         0 4px 18px rgba(0,0,0,.35);
 
 }
 
-.logo-section{
+
+
+.nav-links{
 
     display:flex;
 
     align-items:center;
 
-}
+    gap:30px;
 
 
-
-.site-logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    text-decoration:none;
-
-}
+    padding:12px 28px;
 
 
-
-.site-logo img{
-
-    width:42px;
-
-    height:42px;
-
-    border-radius:10px;
-
-    object-fit:cover;
-
-    transition:.3s;
-
-}
+    border-radius:20px;
 
 
-
-.site-logo span{
-
-    color:white;
-
-    font-size:24px;
-
-    font-weight:700;
-
-}
+    background:
+        rgba(15,23,42,.35);
 
 
-
-.site-logo:hover img{
-
-    transform:
-
-        rotate(8deg)
-
-        scale(1.08);
-
-}
+    backdrop-filter:blur(12px);
 
 
-
-.site-logo:hover span{
-
-    color:#dbeafe;
-}
-
-
-
-.nav-links {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-
-    padding: 12px 28px;
-
-    border-radius: 20px;
-
-    background: rgba(15, 23, 42, 0.35);
-
-    backdrop-filter: blur(12px);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255,255,255,.08);
 
 }
 
 
 
 nav a{
-
 
     color:white;
 
@@ -190,19 +110,9 @@ nav a:hover{
 
 
     text-shadow:
-
-
-        0 0 12px rgba(
-
-            255,
-            255,
-            255,
-            .7
-
-        );
+        0 0 12px rgba(255,255,255,.7);
 
 }
-
 
 
 
@@ -959,47 +869,5 @@ footer{
         font-size:32px;
 
     }
-
-}
-
-@media(max-width:768px){
-
-
-
-nav{
-
-
-    flex-direction:column;
-
-
-    gap:15px;
-
-
-    padding:20px;
-
-}
-
-
-
-.nav-links{
-
-
-    flex-wrap:wrap;
-
-
-    justify-content:center;
-
-}
-
-
-
-.site-logo span{
-
-
-    font-size:20px;
-
-}
-
-
 
 }
