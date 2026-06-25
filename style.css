@@ -9,6 +9,10 @@ body{
 
 /* NAVBAR */
 
+/* ==========================================
+   NAVBAR
+========================================== */
+
 nav{
 
     position:sticky;
@@ -16,16 +20,29 @@ nav{
 
     z-index:1000;
 
-    padding:18px;
 
-    text-align:center;
+    padding:18px 0;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 
     background:linear-gradient(
+
         90deg,
+
         #2563eb,
+
         #16a34a,
+
         #ea580c
+
     );
+
 
     box-shadow:
         0 4px 18px rgba(0,0,0,.35);
@@ -33,31 +50,59 @@ nav{
 }
 
 
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+
+
 nav a{
+
 
     color:white;
 
+
     text-decoration:none;
 
-    margin:0 20px;
 
     font-size:18px;
 
+
     font-weight:600;
+
 
     transition:.3s;
 
 }
 
 
+
 nav a:hover{
+
 
     color:#dbeafe;
 
+
     text-shadow:
-        0 0 12px rgba(255,255,255,.7);
+
+        0 0 12px rgba(
+
+            255,
+            255,
+            255,
+            .7
+
+        );
 
 }
+
 
 
 /* DROPDOWN */
@@ -477,33 +522,153 @@ footer{
 
 
 
-/* AOPS */
+
+/* ==========================================
+   AOPS CARD
+========================================== */
+
 
 .aops-link{
 
+
     display:flex;
+
 
     align-items:center;
 
-    gap:20px;
+
+    gap:18px;
+
+
+    padding:18px 22px;
+
+
+    border-radius:16px;
+
+
+
+    text-decoration:none;
+
+
+
+    color:white;
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(37,99,235,.15),
+
+            rgba(22,163,74,.15),
+
+            rgba(234,88,12,.15)
+
+        );
+
+
+
+    border:
+
+
+        1px solid rgba(
+
+            255,
+            255,
+            255,
+            .06
+
+        );
+
+
+
+    box-shadow:
+
+
+        0 8px 24px rgba(
+
+            0,
+            0,
+            0,
+            .25
+
+        );
+
+
+
+    transition:.3s;
+
 
 }
+
+
+
+
+.aops-link:hover{
+
+
+    transform:
+
+
+        translateY(-3px)
+
+
+
+        scale(1.02);
+
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(37,99,235,.25),
+
+            rgba(22,163,74,.25),
+
+            rgba(234,88,12,.25)
+
+        );
+
+
+}
+
+
 
 
 .aops-icon{
 
-    width:40px;
 
-    height:40px;
+    width:42px;
+
+
+    height:42px;
+
+
+    border-radius:10px;
+
 
 }
 
 
+
+
 .aops-text{
+
 
     font-size:18px;
 
+
     font-weight:600;
+
 
 }
 
